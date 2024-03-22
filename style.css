@@ -1,0 +1,280 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+:root {
+  --color-1: #fffcf7;
+  --color-2: #c2d8b9;
+  --color-3: #344e41;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  text-decoration: none;
+}
+body {
+  background: var(--color-1);
+}
+
+nav {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-2);
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+}
+
+.logo a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: var(--color-1);
+}
+.logo:hover {
+  color: var(--color-3);
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-1);
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  color: var(--color-3);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon i {
+  color: var(--color-1);
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background: var(--color-2);
+    gap: 0;
+    overflow: hidden;
+  }
+  nav ul li {
+    padding: 20px;
+    padding-top: 0;
+  }
+  .menu-icon {
+    color: var(--color-1);
+    display: block;
+  }
+  #menuList {
+    transition: all 0.25s;
+  }
+}
+
+footer {
+  background-color: var(--color-2);
+  color: var(--color-1);
+  padding: 1rem 2rem;
+}
+
+main {
+  margin-top: 70px;
+}
+
+/*Landing Page*/
+
+/* Hero section */
+.main-container {
+  margin: 70px 2rem;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  color: var(--color-3);
+}
+
+.des {
+  width: 1/2;
+}
+
+.des h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+.des p {
+  text-align: justify;
+}
+
+.btn {
+  margin-top: 2rem;
+  display: grid;
+  justify-items: center;
+}
+
+.btn button {
+  background: var(--color-3);
+  font-size: 900;
+  color: var(--color-1);
+  padding: 12px;
+  border: none;
+}
+
+.btn button:hover {
+  background: #3d5c4d;
+}
+
+.mb-btn {
+  display: none;
+}
+
+.image {
+  width: 1/2;
+}
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    flex-direction: column;
+    justify-content: center;
+    margin: 90px 0rem;
+    height: 100%;
+  }
+  .des {
+    margin: 0rem 2rem;
+  }
+  .btn {
+    display: none;
+  }
+  .mb-btn {
+    margin-top: 2rem;
+    display: grid;
+    justify-items: center;
+  }
+  .mb-btn button {
+    background: var(--color-3);
+    font-size: bold;
+    color: var(--color-1);
+    padding: 10px;
+    border: none;
+  }
+
+  .mb-btn button:hover {
+    background: #3d5c4d;
+  }
+
+  .image {
+    width: 100%;
+  }
+}
+
+/* Landing page Popular blogs */
+.blogs-heading{
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--color-3);
+}
+
+.blogs-heading a {
+  color: var(--color-3);
+  font-size: 14px;
+}
+
+.blogs-heading a:hover {
+  text-decoration: underline;
+}
+
+/*Landing page Gallary section */
+.galary-heading {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--color-3);
+}
+
+.galary-heading a {
+  color: var(--color-3);
+  font-size: 14px;
+}
+
+.galary-heading a:hover {
+  text-decoration: underline;
+}
+
+/* Galary page */
+.container {
+  max-width: 100%;
+  margin: 0 2rem;
+}
+
+.container .title {
+  font-size: 32px;
+  margin-bottom: calc((7rem - 70px));
+  text-align: center;
+  margin-top: 7rem;
+  border-bottom: 1px solid var(--color-3);
+  padding-bottom: 2rem;
+}
+
+.image-container {
+  columns: 3 250px;
+  gap: 30px;
+}
+
+.image-container img {
+  margin-bottom: 30px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.video-container{
+  columns: 2 500px;
+  gap: 30px;
+  margin-bottom: 2rem;
+}
+.video-container video{
+  margin-bottom: 30px;
+  width: 100%;
+}
