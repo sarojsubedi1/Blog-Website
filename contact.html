@@ -29,10 +29,11 @@
     <main class="contact-container">
       <form id="form" class="contact-form">
         <h1>Contact Us</h1>
-        <input name="name" type="text" placeholder="Full Name" required/>
-        <input name="email" type="email" placeholder="Email"  required/>
-        <input name="address" type="text" placeholder="Address" required/>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+        <input name="name" id="name" type="text" placeholder="Full Name"/>
+        <input name="email" id="email" type="email" placeholder="Email" />
+        <input name="address" id="address" type="text" placeholder="Address"/>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+        <p id="error"></p>
         <button type="submit">Send Message</button>
       </form>
     </main>
